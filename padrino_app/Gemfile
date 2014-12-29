@@ -1,0 +1,27 @@
+source 'https://rubygems.org'
+
+gem 'puma'
+
+# Padrino Stable Gem
+gem 'padrino', '0.12.4'
+
+# Project requirements
+gem 'rake'
+gem 'padrino-sprockets', require: 'padrino/sprockets'
+gem 'uglifier'
+gem 'yui-compressor'
+gem 'activemodel', '4.2.0', require: 'active_model'
+gem 'goatmail'
+
+group :development do
+  gem 'neat'
+  gem 'bitters'
+  gem 'pry-padrino'
+end
+
+# Component requirements
+gem 'sass'
+gem 'slim'
+
+# Test requirements
+

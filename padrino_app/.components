@@ -1,0 +1,9 @@
+---
+:orm: none
+:test: none
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: scss
+:namespace: PadrinoApp
+:migration_format: number
