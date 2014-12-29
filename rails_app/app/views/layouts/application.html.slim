@@ -1,0 +1,15 @@
+doctype 5
+html
+  head
+    title Goatmail Sample
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+  body
+    header.navigation
+      .navigation-wrapper Goatmail Sample
+    section.container
+      .wrapper
+        = yield
+    footer.footer
+      a href="https://github.com/tyabe/goatmail" target="_blank"  This application's project page
+

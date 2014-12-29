@@ -1,0 +1,21 @@
+fieldset
+  p
+    | Send test mail using
+    a<> href="https://github.com/tyabe/goatmail" target="_blank" goadmail
+    | from this form.
+  p
+    | Note: Results will be published.
+    a<> href="/inbox" You can see the send mails from here.
+  = form_for @message, url: '/', multipart: true do |f|
+    p
+      = f.label :subject
+      = f.text_field :subject, required: true
+    p
+      = f.label :body
+      = f.text_area :body, rows: 6, required: true
+    p
+      = f.label :attachment
+      = f.file_field :attachment
+    p
+      = f.submit
+
