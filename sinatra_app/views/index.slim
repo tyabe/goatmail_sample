@@ -1,0 +1,22 @@
+fieldset
+  p
+    | Send test mail using
+    a<> href="https://github.com/tyabe/goatmail" target="_blank" goadmail
+    | from this form.
+  p
+    | Note: Results will be published.
+    a<> href="/inbox" You can see the send mails from here.
+  form method="post" accept-charset="UTF-8" action="/" enctype="multipart/form-data" id="new_message" class="new_message"
+    input type="hidden" value="✓" name="utf8"
+    p
+      label for="message_subject" Subject
+      input type="text" id="message_subject" name="message[subject]" required="required"
+    p
+      label for="message_body" Body
+      textarea id="message_body" name="message[body]" required="required" rows="6"
+    p
+      label for="message_attachment" Attachment
+      input type="file" id="message_attachment" name="message[attachment]"
+    p 
+      input type="submit" value="Create Message" name="commit"
+
