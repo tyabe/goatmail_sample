@@ -14,5 +14,6 @@ gem 'padrino-helpers'
 gem 'sass'
 gem 'slim'
 
+gem 'bourbon'
 gem 'neat'
 gem 'bitters'

@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @import "bourbon";
-@import "base/grid-settings";
 @import "neat";
 @import "base/base";
 
@@ -35,7 +34,7 @@ header.navigation {
 
 .footer {
   $footer-color: transparentize(white, 0.3);
-  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
   $footer-link-color: $footer-color;
   $footer-link-color-hover: white;
   $footer-disclaimer-color: transparentize($footer-color, .6);
