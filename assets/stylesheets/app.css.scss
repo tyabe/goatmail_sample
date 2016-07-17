@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@import "bourbon";
+@import "neat";
+@import "base/base";
+
+header.navigation {
+  $navigation-background: $dark-gray;
+  $navigation-height: 60px;
+  $navigation-padding: .6em;
+  $navigation-color: white;
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  height: $navigation-height;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+
+  .navigation-wrapper {
+    line-height: $navigation-height;
+    padding-left: $navigation-padding;
+    color: $navigation-color;
+    font-size: 2em;
+  }
+}
+
+.wrapper {
+  padding: 0;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  $footer-color: transparentize(white, 0.3);
+  $footer-background: desaturate(darken($action-color, 20%), 30%);
+  $footer-link-color: $footer-color;
+  $footer-link-color-hover: white;
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+  $footer-height: 60px;
+  $footer-padding: 1em;
+
+  background: $footer-background;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $footer-padding;
+  padding-right: $footer-padding;
+  line-height: $footer-height;
+
+  a {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+    color: $footer-link-color;
+    &:hover {
+      color: $footer-link-color-hover;
+    }
+  }
+}

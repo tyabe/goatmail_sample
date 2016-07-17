@@ -1,3 +1,14 @@
-# Goatmail: sample applications
+# Goatmail: sample application
 
-This is the sample applications for [goatmail](https://github.com/tyabe/goatmail).
+This is the sample application for [goatmail](https://github.com/tyabe/goatmail).
+
+Try on the your local machine:
+
+```
+$ mkdir sandbox
+$ cd sandbox
+$ git clone https://github.com/tyabe/goatmail_sample.git
+$ cd goatmail_sample/sinatra_app
+$ bundle install
+$ bundle exec puma
+```
