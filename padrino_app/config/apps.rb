@@ -27,7 +27,7 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, 'b51d15164539394d71cd04a27348342e6e8c869192022d961c4d5198859ec299'
+  set :session_secret, '1c4f1e0e000ca27cfdbc5415a44ae34825fd47593f9882db75ddd0147a84e007'
   set :protection, :except => :path_traversal
   set :protect_from_csrf, true
   set :delivery_method, Goatmail::DeliveryMethod => {}

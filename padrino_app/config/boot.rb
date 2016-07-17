@@ -1,9 +1,8 @@
 # Defines our constants
-RACK_ENV = ENV['RACK_ENV'] ||= 'development'  unless defined?(RACK_ENV)
+RACK_ENV = ENV['RACK_ENV'] ||= 'development' unless defined?(RACK_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 
 # Load our dependencies
-require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 Bundler.require(:default, RACK_ENV)
 
@@ -13,7 +12,11 @@ Bundler.require(:default, RACK_ENV)
 # Padrino::Logger::Config[:development][:log_level]  = :devel
 # Padrino::Logger::Config[:development][:log_static] = true
 #
-# ## Configure your I18n
+# ## Enable logging of source location
+#
+# Padrino::Logger::Config[:development][:source_location] = true
+#
+# ## Configure your I18n
 #
 # I18n.default_locale = :en
 # I18n.enforce_available_locales = false
@@ -24,19 +27,28 @@ Bundler.require(:default, RACK_ENV)
 # text_field :foo, :dialog => true
 # Generates: <input type="text" data-dialog="true" name="foo" />
 #
-
 ## Add helpers to mailer
 require 'mail'
 Mail::Message.class_eval do
+#   include Padrino::Helpers::NumberHelpers
+#   include Padrino::Helpers::TranslationHelpers
   include Padrino::Helpers::OutputHelpers
   include Padrino::Helpers::TagHelpers
   include Padrino::Helpers::FormatHelpers
 end
 
 ##
+# Require initializers before all other dependencies.
+# Dependencies from 'config' folder are NOT re-required on reload.
+#
+Padrino.dependency_paths.unshift Padrino.root('config/initializers/*.rb')
+
+##
 # Add your before (RE)load hooks here
+# These hooks are run before any dependencies are required.
 #
 Padrino.before_load do
+  require 'goatmail'
 end
 
 ##
