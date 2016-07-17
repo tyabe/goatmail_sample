@@ -13,7 +13,5 @@ class MessagesController < ApplicationController
     else
       redirect_to '/'
     end
-
   end
-
 end

@@ -1,5 +1,4 @@
-class SampleMailer < ActionMailer::Base
-  default from: "from@example.com"
+class SampleMailer < ApplicationMailer
   default to:   "to@example.com"
 
   def notice(message)
