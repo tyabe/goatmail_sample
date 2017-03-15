@@ -6,7 +6,7 @@ fieldset
   p
     | Note: Results will be published.
     a<> href="/inbox" You can see the send mails from here.
-  = form_for @message, url: '/', multipart: true do |f|
+  = form_for @message, '/', multipart: true do |f|
     p
       = f.label :subject
       = f.text_field :subject, required: true

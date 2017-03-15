@@ -19,7 +19,7 @@ gem 'rake'
 gem 'padrino-sprockets', require: 'padrino/sprockets'
 gem 'uglifier'
 gem 'yui-compressor'
-gem 'activemodel', '4.2.0', require: 'active_model'
+gem 'activemodel', '5.0.2', require: 'active_model'
 gem 'goatmail', require: false
 
 group :development do
@@ -36,7 +36,7 @@ gem 'slim'
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '0.13.2'
+gem 'padrino', '0.14.0'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
